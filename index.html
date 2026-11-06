@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f1eb">
+  <meta name="description" content="A monthly mystery book club. Find your next favourite story with Sanshine's Exclusive Book Club.">
+  <title>Sanshine's Exclusive Book Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="announcement">A NEW MONTH, A NEW LITTLE MYSTERY <span aria-hidden="true">✳</span> THE COLLECTION IS COMING SOON</div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Sanshine's Exclusive Book Club home">
+      <span class="wordmark-small">SANSHINE'S</span>
+      <span class="wordmark-main">EXCLUSIVE BOOK CLUB</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#collection">The collection</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#about">Our little club</a>
+    </nav>
+    <button class="bag-button" id="open-bag" type="button" aria-label="Open shopping bag">
+      Your bag <span class="bag-count" id="bag-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">A BOOKISH LITTLE ADVENTURE · EST. 2026</p>
+        <h1>Some stories<br>are better <em>discovered.</em></h1>
+        <p class="hero-description">A monthly collection of mystery books, thoughtfully chosen and wrapped for the joy of not knowing what comes next.</p>
+        <a class="button button-dark" href="#collection">Explore the collection <span aria-hidden="true">↗</span></a>
+        <p class="hero-note">Good books. Lovely surprises. A little bit of chaos.</p>
+      </div>
+      <div class="hero-art" aria-label="Decorative illustration of a wrapped mystery book">
+        <div class="art-sun"></div>
+        <div class="book-stack book-back"></div>
+        <div class="book-stack book-front">
+          <span class="book-stamp">A STORY<br>WAITING<br>FOR YOU</span>
+          <span class="book-ribbon"></span>
+        </div>
+        <span class="art-spark spark-one">✳</span>
+        <span class="art-spark spark-two">✳</span>
+        <span class="art-caption">UNWRAP<br>THE UNKNOWN</span>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Club motto">
+      <span>READ CURIOUSLY</span><i>✳</i><span>STAY A LITTLE MYSTERIOUS</span><i>✳</i><span>FIND YOUR NEXT FAVOURITE</span><i>✳</i>
+    </section>
+
+    <section class="collection section-wrap" id="collection">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE MONTHLY EDIT</p>
+          <h2>Meet your next<br><em>plot twist.</em></h2>
+        </div>
+        <p class="section-intro">Choose by mood, genre and the little clues we leave behind. The title stays our secret until it reaches you.</p>
+      </div>
+
+      <div class="collection-status" id="collection-status">
+        <div><span class="status-dot"></span><strong>Preview collection</strong><span class="status-separator">/</span><span>Orders aren't open just yet</span></div>
+        <span class="slot-copy" id="slot-copy">Monthly book slots will appear here</span>
+      </div>
+
+      <div class="filter-row" role="group" aria-label="Filter books by genre">
+        <button class="filter-chip active" data-filter="All" type="button">All stories</button>
+        <button class="filter-chip" data-filter="Literary Fiction" type="button">Literary fiction</button>
+        <button class="filter-chip" data-filter="Romance" type="button">Romance</button>
+        <button class="filter-chip" data-filter="Fantasy" type="button">Fantasy</button>
+        <button class="filter-chip" data-filter="Thrillers" type="button">Thrillers</button>
+      </div>
+
+      <div class="book-grid" id="book-grid" aria-live="polite"></div>
+      <p class="preview-disclaimer">This is our first website preview. The sample stories and prices below are placeholders, not an active catalogue or an invitation to pay.</p>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="section-wrap">
+        <p class="eyebrow">A VERY SIMPLE SORT OF MAGIC</p>
+        <h2>How the little<br><em>mystery works.</em></h2>
+        <div class="steps-grid">
+          <article class="step"><span class="step-number">01</span><h3>Follow the clues</h3><p>Browse the monthly shelf by genre, page count and spoiler-light descriptions.</p></article>
+          <article class="step"><span class="step-number">02</span><h3>Choose your story</h3><p>Add as many books as you like, then choose the unboxing tier for each one.</p></article>
+          <article class="step"><span class="step-number">03</span><h3>Leave the rest to us</h3><p>Once your order is confirmed, we'll prepare your parcel and share its tracking details.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-wrap" id="about">
+      <div class="about-mark">S.</div>
+      <div><p class="eyebrow">A NOTE FROM THE CURATOR</p><h2>A club for the<br><em>curious reader.</em></h2><p>Made for readers who love the feeling of finding a book they didn't know they needed. Each month's collection is small, intentional and a little unpredictable.</p><p class="signature">See you between the pages, <span>Sanshine</span></p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-wordmark" href="#home">SANSHINE'S EXCLUSIVE BOOK CLUB</a>
+    <span>Some stories are better discovered.</span>
+    <span>© <span id="year"></span> Sanshine's Exclusive Book Club</span>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="bag-drawer" id="bag-drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow">YOUR LITTLE STACK</p><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button class="close-drawer" id="close-bag" type="button" aria-label="Close bag">×</button></div>
+    <div class="bag-items" id="bag-items"><p class="empty-bag">Your bag is waiting for a story.</p></div>
+    <div class="drawer-bottom"><div class="total-line"><span>Preview total</span><strong id="bag-total">₹0</strong></div><p class="drawer-note">Shipping is intended to be included in the package price. Final prices will be confirmed before launch.</p><button class="button button-dark checkout-button" type="button" disabled>Checkout will open soon</button></div>
+  </aside>
+</body>
+</html>
